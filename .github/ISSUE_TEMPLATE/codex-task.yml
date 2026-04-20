@@ -1,0 +1,39 @@
+name: Codex Task
+description: Task for Codex execution
+title: "[TASK] "
+labels: ["automation"]
+
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: TASK TYPE
+      options:
+        - feature
+        - bug
+        - automation
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: GOAL
+      description: What to build
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: FILES TO TOUCH
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ACCEPTANCE CRITERIA
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: NOTES
